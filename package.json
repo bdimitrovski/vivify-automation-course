@@ -1,20 +1,14 @@
 {
-  "name": "cypress-tau-course",
+  "name": "cypress-vivify-ideas",
   "version": "1.0.0",
-  "description": "Companion repo for Cypress course on Test automation university",
+  "description": "Companion repo for vivify-ideas automation course",
   "scripts": {
     "cy:open": "./node_modules/.bin/cypress open",
     "cy:run": "./node_modules/.bin/cypress run",
     "start": "cd app && npm start",
     "postinstall": "cd app && npm install"
   },
-  "keywords": [
-    "cypress",
-    "testing",
-    "course",
-    "tau"
-  ],
-  "author": "Filip Hric",
+  "author": "Bojan Dimitrovski",
   "license": "ISC",
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^1.6.0",

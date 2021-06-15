@@ -1,5 +1,20 @@
 {
-  "boards": [],
+  "boards": [
+    {
+      "name": "Groceries",
+      "user": 0,
+      "id": 69997353505,
+      "starred": false,
+      "created": "2021-06-15"
+    },
+    {
+      "name": "Learning Cypress",
+      "user": 0,
+      "id": 69997353506,
+      "starred": false,
+      "created": "2021-06-15"
+    }
+  ],
   "tasks": [],
   "users": [],
   "lists": []
