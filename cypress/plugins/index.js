@@ -1,10 +1,15 @@
-const { setupDb } = require('./setupDb')
+const axios = require('axios').default;
 
 module.exports = (on, config) => {
   on('task', {
-    setupDb
+    async fetchData({ url }) {
+      try {
+        const response = await axios.get(url);
+
+        return JSON.parse(JSON.stringify(response.data));
+      } catch (err) {
+        console.error(err);
+      }
+    },
   })
 }
-
-
-// require('@applitools/eyes-cypress')(module);

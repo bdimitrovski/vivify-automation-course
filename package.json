@@ -13,6 +13,7 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^1.6.0",
     "@applitools/eyes-cypress": "^3.20.4",
+    "axios": "^0.21.1",
     "cypress": "^6.6.0",
     "cypress-file-upload": "^5.0.2",
     "typescript": "^4.3.5"
