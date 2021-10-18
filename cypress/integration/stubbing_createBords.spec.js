@@ -29,7 +29,6 @@ describe('Network stubbing', () => {
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        host: 'localhost:3000',
       });
     });
   });

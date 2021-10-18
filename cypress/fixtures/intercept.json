@@ -15,18 +15,5 @@
   {
     "name" : "Done",
     "id" : 3
-  },
-  { 
-    "boardId" : 2, 
-    "title": "Stubbing network responses" 
-  },
-  {
-    "boardId" : 2,
-    "title" : "Changing parts of response data"
-  },
-  {
-    "boardId" : 2,
-    "title" : "Intercepting"
   }
-  
 ]
