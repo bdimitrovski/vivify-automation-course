@@ -1,0 +1,19 @@
+[
+  {
+    "name" : "Todo",
+    "id" : 0
+  },
+  {
+    "name" : "In progress",
+    "starred" : true,
+    "id" : 1
+  },
+  {
+    "name" : "In QA",
+    "id" : 2
+  },
+  {
+    "name" : "Done",
+    "id" : 3
+  }
+]

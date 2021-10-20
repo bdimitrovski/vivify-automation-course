@@ -2,5 +2,24 @@
   "boards": [],
   "tasks": [],
   "users": [],
-  "lists": []
+  "lists": [
+    {
+      "boardId": 2,
+      "title": "Stubbing network responses",
+      "id": 53167070725,
+      "created": "2021-10-18"
+    },
+    {
+      "boardId": 2,
+      "title": "Changing parts of response data",
+      "id": 19010778458,
+      "created": "2021-10-18"
+    },
+    {
+      "boardId": 2,
+      "title": "Intercepting",
+      "id": 86038627634,
+      "created": "2021-10-18"
+    }
+  ]
 }
