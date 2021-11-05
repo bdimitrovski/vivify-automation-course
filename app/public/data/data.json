@@ -1,25 +1,94 @@
 {
-  "boards": [],
-  "tasks": [],
-  "users": [],
+  "boards": [
+    {
+      "name": "My board",
+      "user": 1,
+      "id": 69232485146,
+      "starred": false,
+      "created": "2021-11-05"
+    }
+  ],
+  "tasks": [
+    {
+      "boardId": 69232485146,
+      "description": "",
+      "completed": false,
+      "listId": 3435126927,
+      "title": "Task 1",
+      "id": 12348009794,
+      "created": "2021-11-05",
+      "deadline": "2021-11-08"
+    },
+    {
+      "boardId": 69232485146,
+      "description": "",
+      "completed": false,
+      "listId": 3435126927,
+      "title": "Task 2",
+      "id": 82051120854,
+      "created": "2021-11-05",
+      "deadline": "2021-11-08"
+    },
+    {
+      "boardId": 69232485146,
+      "description": "",
+      "completed": false,
+      "listId": 3435126927,
+      "title": "Task 3",
+      "id": 21325825068,
+      "created": "2021-11-05",
+      "deadline": "2021-11-08"
+    },
+    {
+      "boardId": 69232485146,
+      "description": "",
+      "completed": false,
+      "listId": 50509700987,
+      "title": "Task 1",
+      "id": 21267981581,
+      "created": "2021-11-05",
+      "deadline": "2021-11-08"
+    },
+    {
+      "boardId": 69232485146,
+      "description": "",
+      "completed": false,
+      "listId": 50509700987,
+      "title": "Task 2",
+      "id": 407381406,
+      "created": "2021-11-05",
+      "deadline": "2021-11-08"
+    },
+    {
+      "boardId": 69232485146,
+      "description": "",
+      "completed": false,
+      "listId": 50509700987,
+      "title": "Task 3",
+      "id": 37956887537,
+      "created": "2021-11-05",
+      "deadline": "2021-11-08"
+    }
+  ],
+  "users": [
+    {
+      "email": "b.g.dimitrovski@gmail.com",
+      "password": "$2a$10$X9p9TCvgIk5Mp1uvzyEycup4iY670scQCXwP1g/w2/DKedOHyncaO",
+      "id": 1
+    }
+  ],
   "lists": [
     {
-      "boardId": 2,
-      "title": "Stubbing network responses",
-      "id": 53167070725,
-      "created": "2021-10-18"
+      "boardId": 69232485146,
+      "title": "New list",
+      "id": 3435126927,
+      "created": "2021-11-05"
     },
     {
-      "boardId": 2,
-      "title": "Changing parts of response data",
-      "id": 19010778458,
-      "created": "2021-10-18"
-    },
-    {
-      "boardId": 2,
-      "title": "Intercepting",
-      "id": 86038627634,
-      "created": "2021-10-18"
+      "boardId": 69232485146,
+      "title": "New list",
+      "id": 50509700987,
+      "created": "2021-11-05"
     }
   ]
 }

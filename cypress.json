@@ -1,5 +1,9 @@
 {
   "baseUrl": "http://localhost:3000",
   "viewportHeight": 500,
-  "viewportWidth": 700
+  "viewportWidth": 700,
+  "env": {
+    "username": "b.g.dimitrovski@gmail.com",
+    "password": "Pass123"
+  }
 }

@@ -261,9 +261,9 @@
 
 		<div class="background_container" v-cloak>
 			<h1 class="background_title" v-show="starred(boards).length" >My Starred</h1>
-			<div class="board">
+			<div data-cy="favorite-boards" class="board">
 				<router-link tag="div" class="board_item" v-for="board in starred(boards)" v-on:mouseover.native="showByIndex = board" v-on:mouseout.native="showByIndex = null" :key="board.id" :to="{ path: '/board/' + board.id }">
-          <h1 class="board_title">{{ board.name }}</h1>
+          <h1 :data-cy="board.name" class="board_title">{{ board.name }}</h1>
 					<svg version="1.1" class="Star" data-cy="star"  x="0px" y="0px"
              viewBox="0 0 297 297" v-on:click.stop="updateBoardStarred(board)" v-show="showByIndex === board">
 						<path d="M296.519,114.329c-1.142-3.512-4.15-6.088-7.795-6.674l-89.94-14.441l-41.528-81.074c-1.684-3.287-5.064-5.352-8.755-5.352
@@ -279,9 +279,9 @@
 				</router-link>
 			</div>
 			<h1 class="background_title">My Boards</h1>
-			<div class="board">
+			<div data-cy="my-boards" class="board">
 				<router-link tag="div" class="board_item" data-cy="board-item" :data-id="'board_' + board.id" v-for="board in boards" :key="board.id" :to="{ path: '/board/' + board.id }"  v-on:mouseover.native="showByIndex = board" v-on:mouseout.native="showByIndex = null">
-					<h1 class="board_title">{{ board.name }}</h1>
+					<h1 :data-cy="board.name" class="board_title">{{ board.name }}</h1>
 					<svg version="1.1" class="Star" data-cy="star"  x="0px" y="0px"
 						 viewBox="0 0 297 297" v-on:click.stop="updateBoardStarred(board)" v-show="showByIndex === board">
 						<path d="M296.519,114.329c-1.142-3.512-4.15-6.088-7.795-6.674l-89.94-14.441l-41.528-81.074c-1.684-3.287-5.064-5.352-8.755-5.352
@@ -326,7 +326,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="#5aac44"/></svg>
         {{ this.$root.loggedIn.email }}
         <div id="myDropdown" class="dropdown-content" :class="{ show: loginDropdown }">
-          <span @click="logout()">Log out</span>
+          <span data-cy="logout" @click="logout()">Log out</span>
         </div>
       </div>
       <div
@@ -368,7 +368,7 @@
                   Log in</button>
               </div>
             </div>
-            <p class="LoginModule_logSignSwitch">Don’t have an account? <a @click="logSignSwitch">Sign up here</a></p>
+            <p class="LoginModule_logSignSwitch">Don’t have an account? <a data-cy="signup-link" @click="logSignSwitch">Sign up here</a></p>
         </div>
         <div v-show="signupCardActive">
           <h2 class="LoginModule_title">Sign up to create a free account</h2>
@@ -387,7 +387,7 @@
                   Sign up</button>
               </div>
             </div>
-            <p class="LoginModule_logSignSwitch">Already have an account? <a @click="logSignSwitch">Go to log in</a></p>
+            <p class="LoginModule_logSignSwitch">Already have an account? <a data-cy="goto-login" @click="logSignSwitch">Go to log in</a></p>
         </div>
       </div>
   </div>
@@ -398,7 +398,7 @@
     <Navbar></Navbar>
     <Login></Login>
     <div id="errorMessage" v-show="errorMessage.show" v-cloak>{{ errorMessage.text }}</div>
-    <div id="loginMessage" v-show="loggedIn.active" v-cloak>User is logged in</div>
+    <div data-cy="loggedin-bar" id="loginMessage" v-show="loggedIn.active" v-cloak>User is logged in</div>
     <div id="tools" v-show="tools" v-cloak>Reset application:
       <button @click="resetAll()">All</button>
       <button @click="resetBoards()">Boards</button>
