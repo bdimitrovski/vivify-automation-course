@@ -1,3 +1,5 @@
+import BoardElements from '../support/elements/board-elements';
+
 Cypress.Commands.add('addBoard', (boardName: string) => {
   cy.get('[data-cy="create-board"]').click();
   cy.get('[data-cy=new-board-input]').type(`${boardName}{enter}`);
