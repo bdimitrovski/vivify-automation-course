@@ -1,22 +1,9 @@
 describe('Asserts, hooks and other crooks', () => {
     beforeEach(() => {
-        // prepare testing env - delete boards before each test to have a clean slate
-        cy.request('DELETE', '/api/boards')
-
-        // define login route to wait for after clicking on the login button
-        cy.intercept('/login').as('login')
-
-        // begin with loading the app
-        cy.visit('/')
+        cy.setupAssertTests();
 
         // login the user
-        cy.get('[data-cy=login-menu]').click()
-        cy.get('[data-cy=login-email]').type(Cypress.env('username'))
-        cy.get('[data-cy=login-password]').type(Cypress.env('password'))
-        cy.get('[data-cy=login]').click()
-
-        // we wait for the login request to be fulfilled until we go any further
-        cy.wait('@login')
+        cy.login();
 
         // show the concept of not waiting for animations before asserting DOM: https://docs.cypress.io/guides/references/configuration#Actionability
         // configure the flag in cypress.json
@@ -29,12 +16,10 @@ describe('Asserts, hooks and other crooks', () => {
         cy.get('[data-cy=logged-user]').should(($loggedInUser) => {
             expect($loggedInUser).to.contain('b.g.dimitrovski@gmail.com')
         })
-
     });
 
     afterEach(() => {
-        cy.get('[data-cy=logged-user]').click()
-        cy.get('[data-cy=logout]').click()
+        cy.logout();
 
         // assert that we've been logged out
         cy.get('[data-cy=login-menu] > svg').should('be.visible')
