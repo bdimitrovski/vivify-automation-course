@@ -1,18 +1,25 @@
+import Boards from '../support/classes/boards';
+const boards = new Boards();
+
 describe('Plugins', () => {
-    it('Can fetch data from backend', () => {
-        cy.visit('/');
+    beforeEach(() => {
+        boards.setupTests({
+            resetDB: true
+        });
+    });
 
-        cy.get('[data-cy=create-board]').click();
+    it('Can fetch data from backend and create a new board', () => {
+        boards.createBoard();
 
-        cy.task('fetchData', {
-            url: 'https://jsonplaceholder.typicode.com/posts/'
-        }).then((data) => {
-            cy.get('[data-cy=new-board-input]').type(data[Math.floor(Math.random() * 99) + 1].title);
-            cy.get('[data-cy=new-board-create]').click();
+        boards.createNewBoardFromApi('https://jsonplaceholder.typicode.com/posts/').then((data) => {
+            const boardName = data[Math.floor(Math.random() * 99) + 1].title;
+ 
+            boards.addBoard(boardName);
 
-            // wait 5 seconds to show the entered title
-            cy.wait(5000);
+            // TODO: convert to returnToBoardsView() method
             cy.get('.Nav_boards').click();
+
+            // TODO: convert to deleteBoards() method
             cy.get('[data-cy=board-item]').click();
             cy.get('[data-cy=board-options] > .options > path').click();
             cy.get('[data-cy=board-options] > #myDropdown > .delete').click();

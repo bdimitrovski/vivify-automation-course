@@ -6,7 +6,8 @@
     "cy:open": "./node_modules/.bin/cypress open",
     "cy:run": "./node_modules/.bin/cypress run",
     "start": "cd app && npm start",
-    "postinstall": "cd app && npm install"
+    "postinstall": "cd app && npm install",
+    "test:reporting": "node scripts/test.js"
   },
   "author": "Bojan Dimitrovski",
   "license": "ISC",
@@ -16,7 +17,11 @@
     "@types/mocha": "^9.0.0",
     "axios": "^0.21.1",
     "cypress": "^6.6.0",
-    "cypress-file-upload": "^5.0.2",
+    "cypress-file-upload": "^5.0.8",
+    "fs-extra": "^10.0.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1",
     "typescript": "^4.3.5"
   },
   "dependencies": {

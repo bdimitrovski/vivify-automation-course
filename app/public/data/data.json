@@ -1,75 +1,6 @@
 {
-  "boards": [
-    {
-      "name": "My board",
-      "user": 1,
-      "id": 69232485146,
-      "starred": false,
-      "created": "2021-11-05"
-    }
-  ],
-  "tasks": [
-    {
-      "boardId": 69232485146,
-      "description": "",
-      "completed": false,
-      "listId": 3435126927,
-      "title": "Task 1",
-      "id": 12348009794,
-      "created": "2021-11-05",
-      "deadline": "2021-11-08"
-    },
-    {
-      "boardId": 69232485146,
-      "description": "",
-      "completed": false,
-      "listId": 3435126927,
-      "title": "Task 2",
-      "id": 82051120854,
-      "created": "2021-11-05",
-      "deadline": "2021-11-08"
-    },
-    {
-      "boardId": 69232485146,
-      "description": "",
-      "completed": false,
-      "listId": 3435126927,
-      "title": "Task 3",
-      "id": 21325825068,
-      "created": "2021-11-05",
-      "deadline": "2021-11-08"
-    },
-    {
-      "boardId": 69232485146,
-      "description": "",
-      "completed": false,
-      "listId": 50509700987,
-      "title": "Task 1",
-      "id": 21267981581,
-      "created": "2021-11-05",
-      "deadline": "2021-11-08"
-    },
-    {
-      "boardId": 69232485146,
-      "description": "",
-      "completed": false,
-      "listId": 50509700987,
-      "title": "Task 2",
-      "id": 407381406,
-      "created": "2021-11-05",
-      "deadline": "2021-11-08"
-    },
-    {
-      "boardId": 69232485146,
-      "description": "",
-      "completed": false,
-      "listId": 50509700987,
-      "title": "Task 3",
-      "id": 37956887537,
-      "created": "2021-11-05",
-      "deadline": "2021-11-08"
-    }
-  ],
+  "boards": [],
+  "tasks": [],
   "users": [
     {
       "email": "b.g.dimitrovski@gmail.com",
@@ -77,18 +8,5 @@
       "id": 1
     }
   ],
-  "lists": [
-    {
-      "boardId": 69232485146,
-      "title": "New list",
-      "id": 3435126927,
-      "created": "2021-11-05"
-    },
-    {
-      "boardId": 69232485146,
-      "title": "New list",
-      "id": 50509700987,
-      "created": "2021-11-05"
-    }
-  ]
+  "lists": []
 }

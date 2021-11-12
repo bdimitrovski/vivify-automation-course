@@ -1,21 +1,39 @@
 import Utils from '../utils';
+import BoardElements from '../../elements/board-elements';
 
 const utils = new Utils();
 class Boards {
-    setupTests() {
+    setupTests(options) {
+        if (options && options.resetDB) {
+            cy.request('DELETE', '/api/boards');
+        }
+
         utils.visitUrl('/');
     }
 
+    createBoard() {
+        cy.get(BoardElements.createBoard).click();
+    }
+
     addBoard(boardName) {
-        cy.addBoard(boardName);
+        cy.get(BoardElements.createBoard).click();
+        cy.get(BoardElements.newBoardInput).type(`${boardName}{enter}`);
+    }
+
+    createNewBoardFromApi(url) {
+        return cy.task('fetchData', {
+            url: url
+        });
     }
 
     returnToBoardsView() {
-        cy.returnToBoardsView();
+        cy.get(BoardElements.boardsView).click();
     }
 
     deleteBoard(boardName) {
-        cy.deleteBoard(boardName);
+        cy.contains(boardName).click();
+        cy.get(BoardElements.boardOptions).click();
+        cy.get(BoardElements.deleteBoard).click();
     }
 }
 
