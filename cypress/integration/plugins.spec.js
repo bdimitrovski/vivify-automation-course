@@ -15,14 +15,9 @@ describe('Plugins', () => {
             const boardName = data[Math.floor(Math.random() * 99) + 1].title;
  
             boards.addBoard(boardName);
-
-            // TODO: convert to returnToBoardsView() method
-            cy.get('.Nav_boards').click();
-
-            // TODO: convert to deleteBoards() method
-            cy.get('[data-cy=board-item]').click();
-            cy.get('[data-cy=board-options] > .options > path').click();
-            cy.get('[data-cy=board-options] > #myDropdown > .delete').click();
+            boards.assertBoardName(boardName);
+            boards.returnToBoardsView();
+            boards.deleteBoard(boardName);
         });
     });
 })

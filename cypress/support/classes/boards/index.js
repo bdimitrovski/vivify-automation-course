@@ -20,6 +20,12 @@ class Boards {
         cy.get(BoardElements.newBoardInput).type(`${boardName}{enter}`);
     }
 
+    assertBoardName(boardName) {
+        cy.get(BoardElements.boardTitle).then(($title) => {
+            expect($title[0]._value).to.equal(boardName);
+        })
+    }
+
     createNewBoardFromApi(url) {
         return cy.task('fetchData', {
             url: url

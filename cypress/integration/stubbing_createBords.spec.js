@@ -15,20 +15,8 @@ describe('Network stubbing', () => {
       expect(request.method).to.equal('GET');
       expect(response.statusCode).to.equal(200);
       expect(request.headers).to.include({
-        //accept: 'application/json, text/plain, /',
         accept: 'application/json, text/plain, */*',
-        'accept-encoding': 'gzip, deflate, br',
-        'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-        host: 'localhost:3000',
-        'if-none-match': 'W/"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w"',
-        'proxy-connection': 'keep-alive',
-        referer: 'http://localhost:3000/',
-        'sec-ch-ua': '"Chromium";v="94", "Google Chrome";v="94", ";Not A Brand";v="99"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"macOS"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
+        host: 'localhost:3000'
       });
     });
   });

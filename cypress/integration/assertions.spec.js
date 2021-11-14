@@ -1,3 +1,5 @@
+const { copy } = require("fs-extra");
+
 describe('Asserts, hooks and other crooks', () => {
     beforeEach(() => {
         cy.setupAssertTests();
