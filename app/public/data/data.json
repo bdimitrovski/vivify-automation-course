@@ -1,6 +1,45 @@
 {
-  "boards": [],
-  "tasks": [],
+  "boards": [
+    {
+      "name": "undefined",
+      "user": 0,
+      "id": 4440740656,
+      "starred": false,
+      "created": "2022-05-28"
+    }
+  ],
+  "tasks": [
+    {
+      "boardId": 4440740656,
+      "description": "",
+      "completed": false,
+      "listId": 69637248756,
+      "title": "task test",
+      "id": 45985714850,
+      "created": "2022-05-28",
+      "deadline": "2022-05-31"
+    },
+    {
+      "boardId": 4440740656,
+      "description": "",
+      "completed": false,
+      "listId": 69637248756,
+      "title": "task 3",
+      "id": 42127291911,
+      "created": "2022-05-28",
+      "deadline": "2022-05-31"
+    },
+    {
+      "boardId": 4440740656,
+      "description": "",
+      "completed": false,
+      "listId": 69637248756,
+      "title": "task 2",
+      "id": 10541391596,
+      "created": "2022-05-28",
+      "deadline": "2022-05-31"
+    }
+  ],
   "users": [
     {
       "email": "b.g.dimitrovski@gmail.com",
@@ -8,5 +47,12 @@
       "id": 1
     }
   ],
-  "lists": []
+  "lists": [
+    {
+      "boardId": 4440740656,
+      "title": "task list",
+      "id": 69637248756,
+      "created": "2022-05-28"
+    }
+  ]
 }
