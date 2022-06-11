@@ -1,6 +1,39 @@
 {
-  "boards": [],
-  "tasks": [],
-  "users": [],
-  "lists": []
+  "boards": [
+    {
+      "name": "bbb",
+      "user": 0,
+      "id": 26501239641,
+      "starred": false,
+      "created": "2022-06-11"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "new taskkk",
+      "boardId": 26501239641,
+      "listId": 75868721121,
+      "id": 21027270418,
+      "created": "2022-06-11",
+      "deadline": "2022-06-14"
+    }
+  ],
+  "users": [
+    {
+      "email": "test123@gmail.com",
+      "password": "$2a$10$iLXhDBKbR0iNxo.W6q32feCn/Z3gyOlVvjW1legPMLZLzNQxhMoUm",
+      "id": 1
+    }
+  ],
+  "lists": [
+    {
+      "boardId": 26501239641,
+      "title": {
+        "boardId": 0,
+        "title": "new list"
+      },
+      "id": 75868721121,
+      "created": "2022-06-11"
+    }
+  ]
 }
