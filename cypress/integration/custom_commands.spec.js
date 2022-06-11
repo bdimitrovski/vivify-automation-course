@@ -1,21 +1,27 @@
-import Boards from '../support/classes/boards';
-
-const boards = new Boards();
-
-describe('Creating a custom command', () => {
-    before(() => {
-        boards.setupTests();
+describe('Creating and using custom commands', () => {
+    beforeEach(() => {
+        cy.resetDB('boards');
+        cy.visit('/')
     })
 
     it('Create a new board via the UI', () => {
-        boards.addBoard('Beers of the world');
-        boards.returnToBoardsView();
 
-        cy.contains('Beers of the world').should('be.visible');
     });
 
-    it('Can delete a board via the UI', () => {
-        boards.deleteBoard('Beers of the world');
-        cy.contains('Beers of the world').should('not.exist');
+    it('Login via UI', () => {
+
     });
+
+    it('Can create a new board via API and edit it', () => {
+
+    });
+
+    it('Can create a list via API', () => {
+
+    });
+
+    it('Open task detail', () => {
+
+    });
+
 });

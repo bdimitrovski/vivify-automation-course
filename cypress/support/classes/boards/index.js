@@ -1,7 +1,11 @@
-import Utils from '../utils';
-import BoardElements from '../../elements/board-elements';
+class Boards {
+    setupTests() {
+        cy.visit('/');
 
-const utils = new Utils();
-class Boards {}
+        cy.resetDB({
+            resetBoards: true
+        })
+    }
+}
 
 export default Boards;
