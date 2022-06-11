@@ -1,12 +1,6 @@
 {
   "boards": [],
   "tasks": [],
-  "users": [
-    {
-      "email": "b.g.dimitrovski@gmail.com",
-      "password": "$2a$10$X9p9TCvgIk5Mp1uvzyEycup4iY670scQCXwP1g/w2/DKedOHyncaO",
-      "id": 1
-    }
-  ],
+  "users": [],
   "lists": []
 }
