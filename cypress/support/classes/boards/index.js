@@ -1,10 +1,7 @@
 class Boards {
     setupTests() {
         cy.visit('/');
-
-        cy.resetDB({
-            resetBoards: true
-        })
+        cy.resetDB('boards');
     }
 }
 
